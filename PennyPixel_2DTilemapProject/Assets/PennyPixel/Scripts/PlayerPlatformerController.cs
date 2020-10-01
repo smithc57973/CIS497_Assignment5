@@ -7,11 +7,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPlatformerController : PhysicsObject {
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    public bool gameOver;
+    public Text winText;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -21,6 +24,8 @@ public class PlayerPlatformerController : PhysicsObject {
     {
         spriteRenderer = GetComponent<SpriteRenderer> (); 
         animator = GetComponent<Animator> ();
+        gameOver = false;
+        winText.enabled = false;
     }
 
     protected override void ComputeVelocity()
@@ -58,5 +63,18 @@ public class PlayerPlatformerController : PhysicsObject {
         animator.SetFloat("velocityY", velocity.y);
 
         targetVelocity = move * maxSpeed;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Flag"))
+        {
+            gameOver = true;
+            winText.enabled = true;
+            if (Input.GetButtonDown("R"))
+            {
+                UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            }
+        }
     }
 }
