@@ -10,8 +10,14 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
+    public GameManager gameManager;
     //Targetable objects health
     public float health = 50f;
+
+    private void Awake()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("Player").GetComponent<GameManager>();
+    }
 
     //On taking damage
     public void TakeDamage(float amount)
@@ -27,5 +33,6 @@ public class Target : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        gameManager.kills++;
     }
 }

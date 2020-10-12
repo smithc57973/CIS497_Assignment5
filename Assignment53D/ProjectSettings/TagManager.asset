@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Fire
+  - Coin
+  - UIManager
+  - FinalStair
+  - Trigger
   layers:
   - Default
   - TransparentFX
