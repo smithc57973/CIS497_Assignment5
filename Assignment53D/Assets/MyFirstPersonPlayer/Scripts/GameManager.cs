@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         coins = 0;
-        maxCoins = 4;
+        maxCoins = 7;
         kills = 0;
-        maxKills = 6;
+        maxKills = 13;
         gameOver = false;
         scoreReached = false;
         finalStair = GameObject.FindGameObjectWithTag("FinalStair");
