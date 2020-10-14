@@ -2,3 +2,6 @@ Chris Smith
 Assignment 5
 Githhub Link:
 https://github.com/smithc57973/CIS497_Assignment5
+
+(I had originally done the 3D assignment in Unity 2018, I seem to have transferred it over 
+to Unity 2020 but I have included both in case there were any issues that I did not catch.)
