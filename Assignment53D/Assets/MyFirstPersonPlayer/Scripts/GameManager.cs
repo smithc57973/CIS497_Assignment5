@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Chris Smith
+ * Assignment53D
+ * Controls game state
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

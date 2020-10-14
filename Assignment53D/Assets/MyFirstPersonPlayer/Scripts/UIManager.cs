@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿/*
+ * Chris Smith
+ * Assignment53D
+ * Controls UI elements
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
